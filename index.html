@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>*********************</h1>
+    <span>Объём цилиндра составляет - </span>
+    <span id="barrelArea"></span>
+    <span>едениц кубических</span>
+    <h1>*************************</h1>
+    <script>
+        let radius = prompt('Введите радиус цилиндра');
+        let height = prompt('Введите высоту цилиндра');
+        let barrelArea = (Math.PI * radius**2 * height).toFixed(2);
+        alert("объём цилиндра = "+ barrelArea + " едениц кубических");
+        document.getElementById("barrelArea").innerHTML= barrelArea;
+        document.write('********Объём цилиндра составляет -' + barrelArea + 'едениц кубических********' + '(вариант №2)');
+    </script>
+</body>
+</html>
