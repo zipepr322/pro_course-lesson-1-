@@ -14,18 +14,23 @@
     </style>
 </head>
 <body>
-    <h1>*********************</h1>
-    <span>Объём цилиндра составляет - </span>
-    <span id="barrelArea"></span>
-    <span>едениц кубических</span>
-    <h1>*************************</h1>
+    <h1>************************************************************************************</h1>
+    <h1>Объём цилиндра с площадью основы (<span id="circleArea"> </span>); радиусом (<span id="radius"> </span>); и высотой (<span id="height"> </span>) равен:</h1>
+    <h1>--------------------</h1>
+    <h1>V= <span id="barrelArea"></span> ед.&sup3; </h1>
+    <h1>--------------------</h1>
+    <h1>end (*c помощью ".toFixed(2)" округлил до 2 знака после запятой</h1>
     <script>
         let radius = prompt('Введите радиус цилиндра');
         let height = prompt('Введите высоту цилиндра');
+        let circleArea = (Math.PI * radius**2).toFixed(2);
         let barrelArea = (Math.PI * radius**2 * height).toFixed(2);
-        alert("объём цилиндра = "+ barrelArea + " едениц кубических");
         document.getElementById("barrelArea").innerHTML= barrelArea;
-        document.write('********Объём цилиндра составляет -' + barrelArea + 'едениц кубических********' + '(вариант №2)');
+        document.getElementById("circleArea").innerHTML= circleArea;
+        document.getElementById("radius").innerHTML= radius;
+        document.getElementById("height").innerHTML= height;
+        document.write('<br \/>**************' +'<br \/>Обьем цилиндра с площадью основы    ' + '('+circleArea+');  '  +  '  радиусом    ' + '(' + radius +');  ' +
+            'и высотой   '+'(' + height+');  ' + '  равен:' +'<br \/> --------------------' + '  <br \/> V='+barrelArea + '<br \/>--------------------'+ '<br \/> end');
     </script>
 </body>
 </html>
